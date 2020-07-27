@@ -8,7 +8,7 @@ class DyldSharedCacheUtil < Formula
     depends_on :xcode => :build
 
     def install
-        system "make", "install", "PREFIX=#{PREFIX}"
+        system "make", "install", "PREFIX=#{prefix}"
     end
 
     test do
