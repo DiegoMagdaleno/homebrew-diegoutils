@@ -3,7 +3,7 @@ class Trm < Formula
     homepage "https://github.com/DiegoMagdaleno/trm"
     url "https://github.com/DiegoMagdaleno/trm.git", :tag => "v0.0.1"
 
-    depends_on "go" => build
+    depends_on "go" => :build
 
     def install
         system "make", "install", "PREFIX=#{prefix}"
