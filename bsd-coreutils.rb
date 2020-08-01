@@ -6,10 +6,12 @@ class BsdCoreutils < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
+    depends_on "openssl@1.1"
+    depends_on "pkg-config"
 
     def install
         system "./autogen.sh"
-        system "./configure", "--prefix=#{prefix}", "--program-prefix=b"
+        system "PKG_CONFIG_PATH=\"#{Formula["openssl"].opt_prefix/lib/pkgconfig}\"", "CPPFLAGS=\"-I#{Formula["openssl"].opt_prefix/include}\"", "LDFLAGS=\"-L#{Formula["openssl"].opt_prefix/lib}\"","./configure", "--prefix=#{prefix}", "--program-prefix=b"
         system "make"
         system "make install"
     end
