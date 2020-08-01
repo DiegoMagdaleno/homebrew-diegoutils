@@ -1,4 +1,4 @@
-class BsdCoreUtils < Formula
+class BsdCoreutils < Formula
     desc "The OpenBSD Coreutils Project is a port of many utilities from OpenBSD to Linux and macOS."
     homepage "https://github.com/DiegoMagdaleno/BSDCoreUtils"
     url "https://github.com/DiegoMagdaleno/BSDCoreUtils.git", :tag => "v6.7-r1"
