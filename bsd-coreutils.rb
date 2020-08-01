@@ -11,10 +11,10 @@ class BsdCoreutils < Formula
 
     def install
         ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["openssl@1.1"].opt_lib}/pkgconfig"
-        ENV.prepend_path "LDFLAGS", "#{Formula["openssl@1.1"].opt_lib}"
-        ENV.prepend_path "CPPFLAGS", "#{Formula["openssl@1.1"].opt_include}"
+        ENV.append "LDFLAGS", "#{Formula["openssl@1.1"].opt_lib}"
+        ENV.append "CPPFLAGS", "#{Formula["openssl@1.1"].opt_include}"
         system "./autogen.sh"
-        system "./configure", "--prefix=#{prefix}", "--program-prefix=b"
+        system "./configure", "--prefix=#{prefix}", "--program-prefix=b", 
         system "make"
         system "make install"
     end
