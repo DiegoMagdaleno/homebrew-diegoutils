@@ -15,7 +15,6 @@ class BsdCoreutils < Formula
         ENV.append "CPPFLAGS", "-I#{Formula["openssl@1.1"].opt_include}"
         system "./autogen.sh"
         system "./configure", "--prefix=#{prefix}", "--program-prefix=b"
-        system "make"
         system "make install"
     end
 
