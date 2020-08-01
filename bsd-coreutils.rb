@@ -1,4 +1,4 @@
-class BsdCoreUtils < Formula
+class BsdCoreutils < Formula
     desc "The OpenBSD Coreutils Project is a port of many utilities from OpenBSD to Linux and macOS."
     homepage "https://github.com/DiegoMagdaleno/BSDCoreUtils"
     url "https://github.com/DiegoMagdaleno/BSDCoreUtils.git", :tag => "v6.7-r1"
@@ -8,6 +8,7 @@ class BsdCoreUtils < Formula
     depends_on "libtool" => :build
     depends_on "openssl@1.1"
     depends_on "pkg-config" => :build
+
     def install
         ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["openssl@1.1"].opt_lib}/pkgconfig"
         ENV.prepend_path "LDFLAGS", "#{Formula["openssl@1.1"].opt_lib}"
