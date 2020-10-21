@@ -9,7 +9,7 @@ class KubaZip < Formula
 
     def install
         mkdir "build" do
-            system "cmake", "-DBUILD_SHARED_LIBS=true", ".."
+            system "cmake", "-DBUILD_SHARED_LIBS=true", "..", *std_cmake_args
             system "make"
             system "make", "install"
         end
