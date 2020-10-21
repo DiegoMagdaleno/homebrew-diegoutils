@@ -8,6 +8,10 @@ class Duckx < Formula
     depends_on "pugixml"
     depends_on "kuba-zip"
 
+    depends_on "gcc"
+
+    fails_with :clang
+
     def install
         mkdir "build" do
             system "cmake", "..", *std_cmake_args
