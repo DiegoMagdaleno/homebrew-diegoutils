@@ -1,7 +1,7 @@
 class Duckx < Formula
     desc "Create, read and write Microsoft Office Word docx files."
     homepage "https://github.com/amiremohamadi/DuckX"
-    head "https://github.com/DiegoMagdaleno/DuckX"
+    head "https://github.com/DiegoMagdaleno/DuckX.git"
     license "MIT"
 
     depends_on "cmake" => :build
