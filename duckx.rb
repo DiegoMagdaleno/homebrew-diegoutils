@@ -6,6 +6,7 @@ class Duckx < Formula
 
     depends_on "cmake" => :build
     depends_on "pugixml"
+    depends_on "kuba-zip"
 
     def install
         mkdir "build" do
