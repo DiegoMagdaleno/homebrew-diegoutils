@@ -1,4 +1,4 @@
-class LibTags < Formula
+class Libtags < Formula
     desc "Obj-C library for manipulating the tags on Files"
     homepage "https://github.com/DiegoMagdaleno/libtags"
     head "https://github.com/DiegoMagdaleno/libtags.git"
